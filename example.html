@@ -1,0 +1,33 @@
+<!--This is a comment-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>this is the title</title>
+	</head>
+	<!--The next code is write in CSS and is responsible for make the page more beatyful-->
+	<style>
+	body
+	{
+		background-color: lightblue;
+	}
+	h1
+	{
+		color: white;
+		text-align: center;
+	}
+	p
+	{
+		font-family: verdana;
+		font-size: 20px;
+	}
+	</style>
+	<!--end of the CSS code-->
+	<body>
+		<h1>This is the Heading</h1>
+		<p>This is a paragraph</p>
+		<p id="test">Click on the button below!</p>
+		<!--The line below use javascript code-->
+		<button type="button" onclick='document.getElementById("test").innerHTML = "Thank you!"'>Click me!</button>
+	</body>
+</html>	
