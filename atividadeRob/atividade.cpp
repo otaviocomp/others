@@ -14,6 +14,10 @@ int main(){
 
 	cap.open(0); //liga a camera
 	cap >> image; //captura a imagem
+    if(!cap.isOpened()){ //testa se a camera esta disponivel
+		cout << "cameras indisponiveis";
+    	return -1;
+	}
 	cvtColor(image, grayImage, CV_BGR2GRAY); //converte para imagem em preto e branco
 	filter2D(grayImage, contorno1, -1, prewittX); //filtro prewitt em X
 	filter2D(grayImage, contorno2, -1, prewittY); //filtro prewitt em Y
