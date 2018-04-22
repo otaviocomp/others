@@ -1,3 +1,5 @@
+#Makefile opencv archlinux
+
 .SUFFIXES:
 .SUFFIXES: .c .cpp
 
@@ -6,8 +8,7 @@ GCC = g++
 
 .c:
 	$(CC) -I$(INCDIR) $(CFLAGS) $< $(GL_LIBS) -o $@
-
 .cpp:
-	$(GCC) -Wall -Wunused -std=c++11 -O2 `pkg-config --cflags opencv` $< -o $@ `pkg-config --libs opencv`
+	$(GCC) -Wall -Wunused $< -o $@ -I /usr/include/opencv -L /usr/lib -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -lopencv_videoio
 
 
