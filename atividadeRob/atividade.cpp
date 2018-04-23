@@ -5,7 +5,7 @@ using namespace cv;
 using namespace std;
 
 int main(){
-	Mat image, logo, grayImage, contorno, contorno1, contorno2, laplacian, prewittX, prewittY, result;
+	Mat image, logo, grayImage, contorno, contorno1, contorno2, laplacian, prewittX, prewittY;
 	VideoCapture cap;
 
 	//mascaras dos filtros para deteccao de bordas
@@ -27,5 +27,6 @@ int main(){
 	//cola a logo e exibe o resultado
 	logo.copyTo(contorno(Rect(contorno.cols - logo.cols, contorno.rows - logo.rows ,logo.cols, logo.rows)));
     imshow("image", contorno);
+	imwrite("resultado.jpg", contorno);
 	waitKey();
 }
